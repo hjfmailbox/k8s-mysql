@@ -39,7 +39,10 @@ data:
     # 服务端默认排序规则
     collation-server=utf8mb4_unicode_ci
     bind-address=0.0.0.0
-    
+    # 修改连接等待超时时间
+    wait_timeout=600
+    # 修改连接不活动超时时间
+    interactive_timeout=600
   slave.cnf: |
     # Apply this config only on slaves.
     [mysqld]
@@ -79,3 +82,7 @@ data:
     # 服务端默认排序规则
     collation-server=utf8mb4_unicode_ci
     bind-address=0.0.0.0
+    # 修改连接等待超时时间
+    wait_timeout=600
+    # 修改连接不活动超时时间
+    interactive_timeout=600
